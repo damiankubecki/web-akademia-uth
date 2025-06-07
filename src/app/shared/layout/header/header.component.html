@@ -1,0 +1,19 @@
+<header class="navbar-container">
+  <div class="navbar-logo">
+    <a routerLink="/">Akademia Web Developmentu</a>
+  </div>
+
+  <nav class="navbar-links" [class.active]="menuOpen()">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Strona główna</a
+    >
+    <a routerLink="/courses" routerLinkActive="active">Kursy</a>
+    <a routerLink="/about" routerLinkActive="active">O nas</a>
+    <a routerLink="/contact" routerLinkActive="active">Kontakt</a>
+  </nav>
+
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+</header>
