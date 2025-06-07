@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-main);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+  --primary-color: #4a6ee0; /* ciemniejszy niebieski do nagłówków, CTA */
+  --secondary-color: #d7e3ff; /* Twój header background */
+  --accent-color: #8eaaff; /* podświetlenia, przyciski */
+
+  --text-color: #1c1c1c; /* główny tekst */
+  --text-light: #666666; /* mniej istotne elementy */
+
+  --bg-color: #f4f7fc; /* ogólne tło strony */
+  --bg-light: #ffffff; /* karty, boxy */
+
+  --border-color: #cfd9ec;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --big-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+
+  --font-main: 'Segoe UI', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 20px;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+}
