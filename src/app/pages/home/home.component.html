@@ -1,0 +1,73 @@
+<section class="home-hero">
+  <div class="hero-text">
+    <h1>Witaj w Akademii Web Developmentu</h1>
+    <p>
+      Rozwijaj swoje umiejętności frontendowe z pomocą nowoczesnych narzędzi i
+      technologii.
+    </p>
+    <a routerLink="/courses" class="btn-primary">Zobacz kursy</a>
+  </div>
+</section>
+
+<section class="home-info">
+  <div class="info-block">
+    <h2>Dlaczego warto szkolić się z nami?</h2>
+    <p>
+      Oferujemy uporządkowaną, responsywną i nowoczesną wiedzę frontendową:
+      HTML, CSS, JS, Angular i więcej.
+    </p>
+
+    <div class="benefits">
+      <div class="benefit">
+        <h3>✅ Praktyczne podejście</h3>
+        <p>
+          Uczysz się przez tworzenie realnych projektów, a nie tylko teorię.
+          Każda lekcja kończy się ćwiczeniem.
+        </p>
+      </div>
+
+      <div class="benefit">
+        <h3>✅ Nowoczesne technologie</h3>
+        <p>
+          Uczymy najnowszych standardów: HTML5, CSS3, JavaScript ES6+,
+          TypeScript i Angular.
+        </p>
+      </div>
+
+      <div class="benefit">
+        <h3>✅ Responsive Design</h3>
+        <p>
+          Wszystko, co tworzysz, działa świetnie na komputerach, tabletach i
+          smartfonach.
+        </p>
+      </div>
+
+      <div class="benefit">
+        <h3>✅ Dla początkujących i średniozaawansowanych</h3>
+        <p>
+          Kursy są uporządkowane tematycznie i poziomami — każdy znajdzie coś
+          dla siebie.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-slider">
+  <h2>Opinie użytkowników</h2>
+  <web-testimonial-slider
+    [testimonials]="[
+      {
+        author: 'Anna K.',
+        text: 'Świetna platforma! Prosto, jasno i bardzo praktycznie. Polecam każdemu.',
+      },
+      {
+        author: 'Marcin Z.',
+        text: 'Dzięki Mini Akademii zrobiłem swoje pierwsze portfolio w Angularze!',
+      },
+      {
+        author: 'Paulina R.',
+        text: 'Materiały są świetnie przygotowane, a strona działa bez zarzutu.',
+      },
+    ]" />
+</section>

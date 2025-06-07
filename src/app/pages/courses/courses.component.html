@@ -1,0 +1,16 @@
+<web-page
+  title="Nasze kursy"
+  description="Rozwijaj swoje umiejętności z Akademią Web Developmentu."
+  [pageTemplate]="pageTemplate" />
+
+<ng-template #pageTemplate>
+  <div class="container">
+    @for (course of courses; track course.title) {
+      <web-course-card
+        [title]="course.title"
+        [description]="course.description"
+        [image]="course.image"
+        [longDescription]="course.longDescription" />
+    }
+  </div>
+</ng-template>

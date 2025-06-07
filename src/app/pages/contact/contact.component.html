@@ -1,0 +1,51 @@
+<web-page
+  title="Skontaktuj się z nami"
+  description="Odpowiemy na Twoją wiadomość w ciągu 24h!"
+  [pageTemplate]="pageTemplate" />
+
+<ng-template #pageTemplate>
+  <div class="container">
+    @if (!submitted) {
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <label for="name">Imię</label>
+        <input id="name" formControlName="name" type="text" />
+        @if (
+          contactForm.get('name')?.hasError('required') &&
+          contactForm.get('name')?.touched
+        ) {
+          <div class="error">Imię jest wymagane.</div>
+        }
+
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" />
+        @if (contactForm.get('email')?.touched) {
+          @if (contactForm.get('email')?.hasError('required')) {
+            <div class="error">Email jest wymagany.</div>
+          }
+          @if (contactForm.get('email')?.hasError('email')) {
+            <div class="error">Podaj poprawny adres e-mail.</div>
+          }
+        }
+
+        <label for="message">Wiadomość</label>
+        <textarea id="message" formControlName="message" rows="5"></textarea>
+        @if (
+          contactForm.get('message')?.hasError('required') &&
+          contactForm.get('message')?.touched
+        ) {
+          <div class="error">Wiadomość jest wymagana.</div>
+        }
+
+        <button type="submit" [disabled]="contactForm.invalid">
+          Wyślij wiadomość
+        </button>
+      </form>
+    }
+
+    @if (submitted) {
+      <div class="thank-you">
+        <h2>Dziękujemy za kontakt!</h2>
+      </div>
+    }
+  </div>
+</ng-template>
