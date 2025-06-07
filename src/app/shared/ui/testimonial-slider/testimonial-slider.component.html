@@ -1,0 +1,11 @@
+<div class="slider-wrapper">
+  <div class="testimonial">
+    <p class="text">"{{ testimonials[currentIndex].text }}"</p>
+    <p class="author">– {{ testimonials[currentIndex].author }}</p>
+  </div>
+
+  <div class="slider-controls">
+    <button (click)="prev()">‹</button>
+    <button (click)="next()">›</button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="course-card">
+  <img [src]="image" [alt]="title" />
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+
+  @if (showDetails) {
+    <div class="long-description">
+      <p>{{ longDescription }}</p>
+    </div>
+  }
+
+  @if (isMobile) {
+    <button class="toggle-btn" (click)="toggleDetails()">
+      {{ showDetails ? 'Zwiń' : 'Pokaż więcej' }}
+    </button>
+  }
+</div>
