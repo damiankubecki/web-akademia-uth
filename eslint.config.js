@@ -4,6 +4,15 @@ const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
 const eslintPrettier = require('eslint-plugin-prettier/recommended');
 
+const commonRules = {
+  'prettier/prettier': [
+    'error',
+    {
+      endOfLine: 'auto',
+    },
+  ],
+};
+
 module.exports = tseslint.config(
   {
     files: ['**/*.ts'],
@@ -16,6 +25,7 @@ module.exports = tseslint.config(
     ],
     processor: angular.processInlineTemplates,
     rules: {
+      ...commonRules,
       '@angular-eslint/directive-selector': [
         'error',
         { type: 'attribute', prefix: 'web', style: 'camelCase' },
@@ -34,6 +44,8 @@ module.exports = tseslint.config(
       ...angular.configs.templateAccessibility,
       eslintPrettier,
     ],
-    rules: {},
+    rules: {
+      ...commonRules,
+    },
   }
 );
